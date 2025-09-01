@@ -1,5 +1,7 @@
 tema principal: figuras históricas
-
+-------------------------------------------------------
+ 
+Nomes para o jogo da forca:
 Bolsonaro
 Stalin
 Hitler
@@ -9,13 +11,26 @@ Gengis Khan
 Cleópatra
 Maria Antonieta
 Joana D'arc
-papa pio
-rei Henrique
-alexandre o grande
+Papa pio
+Rei Henrique
+Alexandre o grande
 Elizabeth bathory
-rainha de saba
-rei erodes
+Rainha de sabá
+Rei erodes
 Leonardo da vinci
 Tchaikovsky
-rene descartes
-maria leopoldina
+Rene descartes
+Maria Leopoldina
+--------------------------------------------------------
+
+interface do programa:
+
+Bem vindo(a) ao jogo da forca sobre figuras historicas! 
+Digite uma letra: 
+
+
+Você ganhou, parabens! Deseja jogar novamente? (s/n):
+
+Você perdeu! Deseja jogar novamente? (s/n):
+
+--------------------------------------------------------
