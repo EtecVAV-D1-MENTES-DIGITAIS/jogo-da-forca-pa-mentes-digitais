@@ -30,7 +30,7 @@ public:
     JogoForca() {
         srand((unsigned)time(NULL));
 
-        // Arte ASCII
+        
         forcaAscii.push_back(
             "   _______\n"
             "  |/      |\n"
@@ -95,17 +95,17 @@ public:
             " _|___    \n"
         );
 
-        // Palavras
-        palavras.push_back("bolsonaro"); palavras.push_back("elizabeth");
-        palavras.push_back("stalin");    palavras.push_back("socrates");
-        palavras.push_back("hitler");   palavras.push_back("ronildo");
-        palavras.push_back("napoleao");      palavras.push_back("jesus");
-        palavras.push_back("trotsky");      palavras.push_back("salomao");
-        palavras.push_back("gengis");    palavras.push_back("diogenes");
+        palavras.push_back("bolsonaro");	palavras.push_back("elizabeth");
+        palavras.push_back("stalin");		palavras.push_back("socrates");
+        palavras.push_back("hitler");   	palavras.push_back("ronildo");
+        palavras.push_back("napoleao");     palavras.push_back("jesus");
+        palavras.push_back("trotsky");      palavras.push_back("maome");
+        palavras.push_back("obama");    	palavras.push_back("diogenes");
         palavras.push_back("cleopatra");    palavras.push_back("tchaikovsky");
-        palavras.push_back("antonieta");     palavras.push_back("trump");
-        palavras.push_back("darc");     palavras.push_back("francisco");
+        palavras.push_back("antonieta");    palavras.push_back("trump");
+        palavras.push_back("einstein");     palavras.push_back("tesla");
         palavras.push_back("galileu");      palavras.push_back("descartes");
+        palavras.push_back("buda");      	palavras.push_back("malala");
 
         palavra = palavras[rand() % palavras.size()];
         palavraOculta = string(palavra.size(), '_');
