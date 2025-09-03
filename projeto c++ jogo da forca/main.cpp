@@ -8,6 +8,14 @@
 using namespace std;
 
 class JogoForca {
+	
+	const string easterEggBolsonaro = 
+"'||'''|,  '||'''|,      /.\      .|'''|  |''||''| '||        .|'''|  '||''''| '||\   /||` '||'''|, '||'''|, '||''''| \n"
+" ||   ||   ||   ||     // \\     ||         ||     ||        ||       ||   .   ||\\.//||   ||   ||  ||   ||  ||   .  \n"
+" ||;;;;    ||...|'    //...\\    `|'''|,    ||     ||        `|'''|,  ||'''|   ||     ||   ||...|'  ||...|'  ||'''|  \n"
+" ||   ||   || \\     //     \\    .   ||    ||     ||         .   ||  ||       ||     ||   ||       || \\    ||      \n"
+".||...|'  .||  \\. .//       \\.  |...|' |..||..| .||...|     |...|' .||....| .||     ||. .||      .||  \\. .||....| \n";
+	
 private:
     vector<string> forcaAscii;
     vector<string> palavras;
@@ -155,6 +163,9 @@ public:
 
         if (palavraOculta == palavra) {
             cout << "\nVoce ganhou, parabens! A palavra correta era: " << palavra << "\n";
+             if (palavra == "bolsonaro") {
+            cout << easterEggBolsonaro << "\n";
+        }
         } else {
             cout << forcaAscii.back() << "\n";
             cout << "\nVoce perdeu! A palavra era: " << palavra << "\n";
