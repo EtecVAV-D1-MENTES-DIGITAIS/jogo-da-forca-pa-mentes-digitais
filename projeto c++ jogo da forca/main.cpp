@@ -9,4 +9,22 @@ int sortear(int max) {
     return n;
 }
 
+bool jaUsada(char usadas[], int qtd, char letra) {
+    int i = 0;
+    while (i < qtd) {
+        if (usadas[i] == letra) return true;
+        i++;
+    }
+    return false;
+}
+
+void mostrarUsadas(char usadas[], int qtd) {
+    std::cout << "Letras ja usadas: ";
+    int i = 0;
+    while (i < qtd) {
+        std::cout << usadas[i] << " ";
+        i++;
+    }
+    std::cout << "\n";
+}
     
