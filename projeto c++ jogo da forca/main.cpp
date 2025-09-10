@@ -3,10 +3,9 @@
 #include <ctime>
 #include <cstring>
 
-int sortear(int max) {
-    int n;
-    n = rand() % max;
-    return n;
+void sortearPalavra(char destino[], const char lista[][20], int total) {
+    int n = rand() % total;
+    strcpy(destino, lista[n]); 
 }
 
 bool jaUsada(char usadas[], int qtd, char letra) {
@@ -51,8 +50,10 @@ int main() {
         "nome16", "nome17", "nome18", "nome19", "nome20"
     };
     
+    char jogarNovamente = 's';
+    while (jogarNovamente == 's' || jogarNovamente == 'S') {
     char palavra[20];
-        sortearPalavra(palavra, palavras, 20);   // usa a função aqui
+        sortearPalavra(palavra, palavras, 20);   
         int tamanho = strlen(palavra);
 
         char oculto[20];
@@ -106,7 +107,8 @@ int main() {
             std::cout << "\nVocê perdeu! A palavra era: " << palavra << "\n";
         }
 
-    
+		std::cout << "Deseja jogar novamente? (s/n): ";
+        std::cin >> jogarNovamente;
     }
 
     return 0;
