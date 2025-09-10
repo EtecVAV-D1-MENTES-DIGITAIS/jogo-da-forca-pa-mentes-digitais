@@ -51,7 +51,60 @@ int main() {
         "nome16", "nome17", "nome18", "nome19", "nome20"
     };
     
-    
+    char palavra[20];
+        sortearPalavra(palavra, palavras, 20);   // usa a função aqui
+        int tamanho = strlen(palavra);
+
+        char oculto[20];
+        int i = 0;
+        while (i < tamanho) {
+            oculto[i] = '_';
+            i++;
+        }
+        oculto[tamanho] = '\0';
+
+        char usadas[26];
+        int qtdUsadas = 0;
+        int erros = 0;
+        int maxErros = 6;
+
+        while (erros < maxErros && strcmp(oculto, palavra) != 0) {
+            std::cout << "\nJogo da Forca\n";
+            mostrarForca(erros);
+            std::cout << "Palavra: " << oculto << "\n";
+            mostrarUsadas(usadas, qtdUsadas);
+
+            std::cout << "Digite uma letra: ";
+            char letra;
+            std::cin >> letra;
+
+            if (jaUsada(usadas, qtdUsadas, letra)) {
+                std::cout << "Você já tentou essa letra!\n";
+                continue;
+            }
+
+            usadas[qtdUsadas] = letra;
+            qtdUsadas++;
+
+            bool acertou = false;
+            int j = 0;
+            while (j < tamanho) {
+                if (palavra[j] == letra) {
+                    oculto[j] = letra;
+                    acertou = true;
+                }
+                j++;
+            }
+
+            if (!acertou) erros++;
+        }
+
+        if (strcmp(oculto, palavra) == 0) {
+            std::cout << "\nParabéns, você ganhou! A palavra era: " << palavra << "\n";
+        } else {
+            mostrarForca(erros);
+            std::cout << "\nVocê perdeu! A palavra era: " << palavra << "\n";
+        }
 
     
     }
