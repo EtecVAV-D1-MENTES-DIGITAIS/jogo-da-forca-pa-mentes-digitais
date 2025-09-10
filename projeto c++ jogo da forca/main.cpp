@@ -27,4 +27,19 @@ void mostrarUsadas(char usadas[], int qtd) {
     }
     std::cout << "\n";
 }
+
+int main() {
+    srand((unsigned)time(NULL));
+
+    const char palavras[20][20] = {
+        "nome1", "nome2", "nome3", "nome4", "nome5",
+        "nome6", "nome7", "nome8", "nome9", "nome10",
+        "nome11", "nome12", "nome13", "nome14", "nome15",
+        "nome16", "nome17", "nome18", "nome19", "nome20"
+    };
+
     
+    }
+
+    return 0;
+}
