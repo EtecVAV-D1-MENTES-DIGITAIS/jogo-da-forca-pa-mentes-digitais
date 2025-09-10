@@ -18,6 +18,19 @@ bool jaUsada(char usadas[], int qtd, char letra) {
     return false;
 }
 
+void mostrarForca(int erros) {
+    const char* forca[7] = {
+        "  +---+\n      |\n      |\n      |\n     ===\n",
+        "  +---+\n  O   |\n      |\n      |\n     ===\n",
+        "  +---+\n  O   |\n  |   |\n      |\n     ===\n",
+        "  +---+\n  O   |\n /|   |\n      |\n     ===\n",
+        "  +---+\n  O   |\n /|\\  |\n      |\n     ===\n",
+        "  +---+\n  O   |\n /|\\  |\n /    |\n     ===\n",
+        "  +---+\n  O   |\n /|\\  |\n / \\  |\n     ===\n"
+    };
+    std::cout << forca[erros] << "\n";
+}
+
 void mostrarUsadas(char usadas[], int qtd) {
     std::cout << "Letras ja usadas: ";
     int i = 0;
@@ -37,6 +50,8 @@ int main() {
         "nome11", "nome12", "nome13", "nome14", "nome15",
         "nome16", "nome17", "nome18", "nome19", "nome20"
     };
+    
+    
 
     
     }
