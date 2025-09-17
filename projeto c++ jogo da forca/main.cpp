@@ -44,10 +44,10 @@ int main() {
     srand((unsigned)time(NULL));
 
     const char palavras[20][20] = {
-        "nome1", "nome2", "nome3", "nome4", "nome5",
-        "nome6", "nome7", "nome8", "nome9", "nome10",
-        "nome11", "nome12", "nome13", "nome14", "nome15",
-        "nome16", "nome17", "nome18", "nome19", "nome20"
+        "cleopatra", "hitler", "mussolini", "eistein", "maome",
+        "jesus", "buddha", "bolsonaro", "kant", "diogenes",
+        "socrates", "pele", "messi", "kafka", "Tesla",
+        "aquiles", "pavarotti", "anubis", "zumbi", "ronildo"
     };
     
     char jogarNovamente = 's';
@@ -70,12 +70,12 @@ int main() {
         int maxErros = 6;
 
         while (erros < maxErros && strcmp(oculto, palavra) != 0) {
-            std::cout << "\nJogo da Forca\n";
+            std::cout << "\nBem vindo(a) ao Jogo da Forca sobre Figuras Históricas!\n";
             mostrarForca(erros);
             std::cout << "Palavra: " << oculto << "\n";
             mostrarUsadas(usadas, qtdUsadas);
 
-            std::cout << "Digite uma letra: ";
+            std::cout << "Digite a letra desejada: ";
             char letra;
             std::cin >> letra;
 
@@ -101,10 +101,10 @@ int main() {
         }
 
         if (strcmp(oculto, palavra) == 0) {
-            std::cout << "\nParabéns, você ganhou! A palavra era: " << palavra << "\n";
+            std::cout << "\nParabens, você ganhou! A palavra era: " << palavra << "\n";
         } else {
             mostrarForca(erros);
-            std::cout << "\nVocê perdeu! A palavra era: " << palavra << "\n";
+            std::cout << "\nVoce perdeu! A palavra era: " << palavra << "\n";
         }
 
 		std::cout << "Deseja jogar novamente? (s/n): ";
